@@ -1,0 +1,125 @@
+<%@ Page Language="C#" MasterPageFile="~/IMD/AgentMasterPage.master" Theme="SkinFile" AutoEventWireup="true"
+    CodeFile="EscalationDetails.aspx.cs" Inherits="User_EscalationDetails" Title=":: Call Desk - Escalation Details ::" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <table width="98%" border="0" cellspacing="1" cellpadding="1">
+        <tr>
+            <td colspan="2">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        
+                        <td class="rcd-TopHeaderBlue">
+                            ESCALATION MATRIX
+                        </td>
+                       
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="height: 20px">
+                <asp:Label ID="lblMessage" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" border="0" cellpadding="1" cellspacing="1" class="rcd-TableBorder">
+                    <tr class="rcd-TableHeader">
+                        <td>Level</td>
+                        <td>Name of Contact Person</td>
+                        <td>Email Id</td>
+                        <td>Contact Details</td>
+                    </tr>
+                    <tr>
+                        <td class="rcd-FieldTitle" width="25%">
+                            Level 1</td>
+                        <td class="rcd-tableCell" width="25%">
+                            <asp:Label ID="lblHarishName" runat="server" Text="Harish Naik" CssClass="rcd-label"></asp:Label>
+                            <br />
+                            <br />
+                             <asp:Label ID="lblSumanth" runat="server" Text="Sumanth sarja" CssClass="rcd-label"></asp:Label>
+                            
+                            </td>
+                            
+ 
+                            
+                            
+                        <td class="rcd-FieldTitle" width="25%">
+                            Harish.Nayak@rcap.co.in
+                            <br />
+                            <br />
+                             <br />
+                            Rgicl.Applnsupport@rcap.co.in                           
+                            
+                            </td>
+                        <td class="rcd-tableCell" width="25%" valign="middle">
+                             <table border="0" cellpadding="1" cellspacing="1" style="vertical-align:middle;" >
+                               <tr>
+                                 <td class="rcd-tableCell" valign="bottom">  
+                                   <br />                               
+                                    <asp:Label ID="lblHarishMB" runat="server" Text=" Mobile No - 9819712563" CssClass="rcd-label"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblHarishLN" runat="server" Text=" Land line - 022- 30385736" CssClass="rcd-label"></asp:Label>                                                                   
+                                    
+                                    <br />
+                                    
+                                    <asp:Label ID="Label1" runat="server" Text=" Mobile No - 8879204251" CssClass="rcd-label"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="Label2" runat="server" Text=" Land line - 022-30385736" CssClass="rcd-label"></asp:Label>   
+                                    
+                                  
+                                 </td>
+                               </tr>                              
+                             
+                             </table>
+                            
+                       </td>
+                    </tr>                    
+                    <tr>
+                        <td class="rcd-FieldTitle" width="25%">
+                            Level 2</td>
+                        <td class="rcd-tableCell" width="25%">
+                            <asp:Label ID="lblNeetaName" runat="server" Text="Neeta Gawde" CssClass="rcd-label"></asp:Label></td>
+                        <td class="rcd-FieldTitle" width="25%">
+                            neeta.sawant@rcap.co.in</td>
+                        <td class="rcd-tableCell" width="25%" valign="middle" >
+                             <table border="0" cellpadding="1" cellspacing="1" style="vertical-align:middle;"  >
+                               <tr>
+                                 <td class="rcd-tableCell" valign="bottom">                                 
+                                    <asp:Label ID="lblNeetaMb" runat="server" Text=" Mobile No - 9022912143" CssClass="rcd-label"></asp:Label>
+                                    <br />                                  
+                                   <asp:Label ID="lblNeetaLN" runat="server" Text=" Land line - 022- 30385742" CssClass="rcd-label"></asp:Label> 
+                                 </td>
+                               </tr>                              
+                             
+                             </table>
+                          </td>   
+                             
+                    </tr>                    
+                    <tr>
+                        <td class="rcd-FieldTitle" width="25%" style="height: 18px">
+                            Level 3</td>
+                        <td class="rcd-tableCell" width="25%" style="height: 18px">
+                            <asp:Label ID="lblRamaniName" runat="server" Text="Ramani M" CssClass="rcd-label"></asp:Label></td>
+                        <td class="rcd-FieldTitle" width="25%" style="height: 18px">
+                            Ramani.Meenakshisundaram@rcap.co.in</td>
+                         <td class="rcd-tableCell" width="25%" valign="middle" style="height: 18px">
+                             <table border="0" cellpadding="1" cellspacing="1" style="vertical-align:middle;">
+                               <tr>
+                                 <td >                                 
+                                    <asp:Label ID="lblRamaniMb" runat="server" Text=" Mobile No - 9324086520" CssClass="rcd-label"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblRamaniLN" runat="server" Text=" Land line - 022- 30381886" CssClass="rcd-label"></asp:Label>  
+                                 </td>
+                               </tr>
+                           
+                             
+                             </table>
+                          </td>   
+                        
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</asp:Content>

@@ -1,0 +1,108 @@
+using System;
+using System.Data;
+using System.IO;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Text;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using CallDeskBAL;
+
+public partial class _Default : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            WebPartManager1.DisplayMode = WebPartManager.DesignDisplayMode;
+            GetApplicationType();
+            BindDefaultTypeSubType();
+        }
+    }
+    public void GetApplicationType()
+    {
+        RegisterNewCallBAL objRNCBAL = new RegisterNewCallBAL();
+        try
+        {
+            ddlApplicationType.DataSource = objRNCBAL.GetApplicationType();
+            ddlApplicationType.DataTextField = "ApplicationName";
+            ddlApplicationType.DataValueField = "ApplicationID_PK";
+            ddlApplicationType.DataBind();
+            CommonUtility.AddSelectToDropDown(ddlApplicationType);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+    public void BindDefaultTypeSubType()
+    {
+        try
+        {
+            CommonUtility.AddSelectToDropDown(ddlIssueRequestType);
+            CommonUtility.AddSelectToDropDown(ddlIssueRequestSubType);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+    protected void ddlApplicationType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        RegisterNewCallBAL objRNCBAL = new RegisterNewCallBAL();
+        try
+        {
+            int intApplicationType_FK = Convert.ToInt16(ddlApplicationType.SelectedValue);
+            ddlIssueRequestType.DataSource = objRNCBAL.GetIssueRequestTypeByApplicationType(intApplicationType_FK);
+            ddlIssueRequestType.DataTextField = "IssueRequestType";
+            ddlIssueRequestType.DataValueField = "IssueRequestType_PK";
+            ddlIssueRequestType.DataBind();
+            CommonUtility.AddSelectToDropDown(ddlIssueRequestType);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+    protected void ddlIssueRequestType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        RegisterNewCallBAL objRNCBAL = new RegisterNewCallBAL();
+        try
+        {
+            int intIssueRequestType_FK = Convert.ToInt16(ddlIssueRequestType.SelectedValue);
+            int intApplicationID = Convert.ToInt16(ddlApplicationType.SelectedValue);
+            ddlIssueRequestSubType.DataSource = objRNCBAL.GetIssueRequestSubTypeByIssueRequestType(intApplicationID, intIssueRequestType_FK);
+            ddlIssueRequestSubType.DataTextField = "IssueRequestSubType";
+            ddlIssueRequestSubType.DataValueField = "IssueRequestSubType_PK";
+            ddlIssueRequestSubType.DataBind();
+            CommonUtility.AddSelectToDropDown(ddlIssueRequestSubType);
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+    protected void ddlIssueRequestSubType_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        RegisterNewCallBAL objRNCBAL = new RegisterNewCallBAL();
+        try
+        {
+            int intApplicationID, intIssueRequestTypeID, intIssueRequestSubTypeID;
+
+            intApplicationID = int.Parse(ddlApplicationType.SelectedValue);
+            intIssueRequestTypeID = int.Parse(ddlIssueRequestType.SelectedValue);
+            intIssueRequestSubTypeID = int.Parse(ddlIssueRequestSubType.SelectedValue);
+
+            string strComments = objRNCBAL.GetTypeSubTypeComment(intIssueRequestSubTypeID);
+            lblRemark.Text = strComments;
+        }
+        catch (Exception ex)
+        {
+            lblMessage.Text = ex.Message;
+        }
+    }
+}

@@ -1,0 +1,1214 @@
+﻿body
+{
+	margin-left: 8px;
+	margin-top: 8px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	/*background-color: #1B67A8;*/
+}
+.rcd-LoginBkg
+{
+	background: url(../images/loginpixel.gif);
+	background-repeat: repeat-x;
+	height: 158px;
+	border-right: #3B83CF 1px solid;
+	border-left: #3B83CF 1px solid;
+}
+.transparent
+{
+	filter: alpha(opacity=90);
+	background-color: green;
+	display: none;
+	width: 170;
+	height: 100;
+	position: absolute;
+	color: yellow;
+	border: 1 green solid;
+}
+
+div.suggestions
+{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid black;
+	position: absolute;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: none;
+	overflow-y: auto;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+div.suggestions div
+{
+	background-color: #FFFFFF;
+	cursor: default;
+	padding: 0px 3px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+div.suggestions div.current
+{
+	background-color: #3366cc;
+	color: white;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+}
+.rcd-txtboxvalue
+{
+	border-right: #5D9CC8 1px solid;
+	border-top: #5D9CC8 1px solid;
+	border-bottom: #5D9CC8 1px solid;
+	border-left: #5D9CC8 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FFFFFF;
+	height: 15px;
+}
+
+.rcd-txtboxvaluewatermark
+{
+	border-right: #5D9CC8 1px solid;
+	border-top: #5D9CC8 1px solid;
+	border-bottom: #5D9CC8 1px solid;
+	border-left: #5D9CC8 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #f2f7e3;
+	height: 15px;
+}
+
+.rcd-multilinetxtboxvalue
+{
+	border-right: #5D9CC8 1px solid;
+	border-top: #5D9CC8 1px solid;
+	border-bottom: #5D9CC8 1px solid;
+	border-left: #5D9CC8 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FFFFFF;
+	height: 90px;
+	width: 250px;
+}
+
+.rcd-multilinetxtboxvaluewatermark
+{
+	border-right: #5D9CC8 1px solid;
+	border-top: #5D9CC8 1px solid;
+	border-bottom: #5D9CC8 1px solid;
+	border-left: #5D9CC8 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FFFFFF;
+	height: 90px;
+	width: 250px;
+}
+
+.rcd-Loginlabel
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #00549D;
+	text-decoration: none;
+	text-align: right;
+	padding-right: 2px;
+}
+
+.rcd-txtboxvalue1
+{
+	border-right: #A5ACB2 1px solid;
+	border-top: #A5ACB2 1px solid;
+	border-bottom: #A5ACB2 1px solid;
+	border-left: #A5ACB2 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #032575;
+	background-color: #E9F3FF;
+}
+
+.rcd-Div
+{
+	height: 430px;
+	width: 100%;
+	overflow: auto;
+	scrollbar-arrow-color: #1B67A8;
+	scrollbar-track-color: #ffffff;
+	scrollbar-shadow-color: #B9CEDF;
+	scrollbar-face-color: #ffffff;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-darkshadow-color: #ffffff;
+	scrollbar-3dlight-color: #ffffff;
+	background-color: #ffffff;
+}
+
+.rcd-TopLeftCorner
+{
+	background: url(../images/topleftcorner_ri.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 85px;
+	width: 19px;
+}
+
+.rcd-TopLeftBanner
+{
+	background: url(../images/topbanner_ri.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 50px;
+	width: 1500px;
+}
+
+.rcd-TopRightBanner
+{
+	background: url(../images/logo_ri.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	height: 85px;
+	width: 800px;
+}
+
+.rcd-TopBanner
+{
+	background: url(../images/topbannerpixel_ri.jpg);
+	background-repeat: repeat-x;
+	height: 85px;
+}
+
+.rcd-TopRightCorner
+{
+	background: url(../images/toprightcorner_ri.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 85px;
+	width: 19px;
+}
+
+.rcd-TopNav
+{
+	background: url(../images/topnavpixel_ri.gif);
+	background-repeat: repeat-x;
+	height: 23px;
+	border-right: #3B83CF 1px solid;
+	border-left: #3B83CF 1px solid;
+}
+
+.rcd-TopHeaderRed
+{
+	background: url(../images/header_red_ri.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 50px;
+}
+.rcd-TopHeaderRight
+{
+	background: url(../images/rightcurve_blue_ri.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 23px;
+}
+.rcd-TopHeaderBlue
+{
+	background: url(../images/header_bluepixel_ri.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: left; /*padding-left: 5px;*/
+}
+
+.rcd-InnerBodyBg
+{
+	border-bottom: #3B83CF 1px solid;
+	border-right: #3B83CF 1px solid;
+	border-left: #3B83CF 1px solid;
+	background-color: #ffffff;
+}
+
+.rcd-Instruct
+{
+	padding-left: 5px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: none;
+	height: 5px;
+}
+
+.rcd-TableBorder
+{
+	background-color: #A0CAE9;
+}
+
+.rcd-TableHeader
+{
+	background-color: #A8D0F3;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	height: 21px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #002170;
+	text-align: left;
+	text-decoration: none;
+	font-style: normal;
+}
+
+.rcd-TableSubheader
+{
+	background-color: #D7EAFE;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	height: 21px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #002170;
+	text-align: left;
+	text-decoration: none;
+	font-style: normal;
+}
+.rcd-FieldTitleSmall
+{
+	background-color: #FFFFFF;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #00549D;
+	text-align: left;
+	text-decoration: none;
+}
+.rcd-FieldTitle
+{
+	background-color: #F8FBFF;
+	height: 18px;
+	padding-left: 5px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #00549D;
+	text-align: left;
+	text-decoration: none;
+}
+
+
+.rcd-tableCellCenterAlign
+{
+	background-color: #ffffff;
+	height: 18px;
+	padding-left: 3px;
+	text-align: center;
+	z-index: -1;
+}
+
+
+.rcd-tableCell
+{
+	background-color: #ffffff;
+	height: 18px;
+	padding-left: 3px;
+	text-align: left;
+}
+
+.rcd-tableCellCenter
+{
+	background-color: #ffffff;
+	height: 18px;
+	padding-left: 3px;
+}
+
+.rcd-CellSpace
+{
+	background-color: #ffffff;
+	height: 5px;
+}
+.rcd-UserName
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #002170;
+	text-align: left;
+	text-decoration: none;
+	font-style: normal;
+	vertical-align: middle;
+}
+.rcd-whitelabel
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding-left: 2px;
+}
+
+/*------ General css starts here ---- */
+
+.rcd-breadcrumarea
+{
+	background: url(../images/topbread_ey.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+}
+
+.rcd-breadcrum
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+
+.rcd-breadcrum:hover
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+
+.rcd-breadcrum:visited
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+
+.rcd-breadcrum:active
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-decoration: underline;
+	padding-left: 20px;
+}
+
+.rcd-text
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #032575;
+	text-decoration: none;
+}
+
+.rcd-user
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+	text-align: right;
+	padding-right: 20px;
+}
+.rcd-error
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+.rcd-msg
+{
+	background-color: #F3F3F3;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #0258C1;
+	text-align: left;
+	text-decoration: none;
+	padding-left: 5px;
+	height: 16px;
+}
+
+.rcd-Button
+{
+	background-color: #a8ddff;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: Bold;
+	color: #002170;
+}
+.rcd-Username
+{
+	font-family: Arial, Verdana, Tahoma, Geneva, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC0000;
+	text-decoration: none;
+	text-align: left;
+	padding-left: 10px;
+}
+.rcd-dropdownvalue
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FFFFFF;
+}
+
+/*------ General css ends here ---- */
+
+/*------ Search panel css starts here ---- */
+
+.rcd-Filterhead
+{
+	background-color: #E8F3FF;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-align: left;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+.rcd-Filtertxthead
+{
+	background-color: #E8F3FF;
+	height: 20px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #032575;
+	text-align: left;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+
+.rcd-Filtervalue
+{
+	background-color: #E8F3FF;
+	height: 28px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal;
+	color: #032575;
+	text-align: left;
+	text-decoration: none;
+	padding-left: 5px;
+}
+
+/*------ Search panel css ends here ---- */
+
+/*------ Grid panel css starts here ---- */
+
+.rcd-Gridborder
+{
+	background-color: #CBCFD2;
+}
+
+.rcd-GridHead
+{
+	background-color: #1B67A8;
+	height: 20px;
+	font-family: Verdana, Arial, Tahoma, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.rcd-Grid
+{
+	background-color: #D8E8F6;
+	height: 20px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+
+
+.rcd-GridAlt
+{
+	background-color: #ffffff;
+	height: 20px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+
+.rcd-GridText_left
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	text-align: left;
+	padding-left: 3px;
+}
+
+.rcd-GridText_Right
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	text-align: Right;
+	padding-right: 3px;
+}
+
+.rcd-GridText_Center
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	text-align: Center;
+}
+
+.rcd-Gridpagination
+{
+	background-color: #E4E7E8;
+	height: 16px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+	text-align: right;
+	padding-right: 5px;
+}
+
+
+.rcd-Gridpagination:active
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+
+.rcd-Gridpagination:hover
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #FF1200;
+	text-decoration: underline;
+}
+
+.rcd-Gridpagination:link
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+/*------ Grid panel css ends here ---- */
+
+/*------ Footer panel css starts here ---- */
+
+.rcd-DownLeftCorner
+{
+	background: url(../images/downleftcorner_ri.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 44px;
+	width: 19px;
+}
+
+.rcd-DownRightCorner
+{
+	background: url(../images/downrightcorner_ri.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 44px;
+	width: 19px;
+}
+
+.rcd-Footer
+{
+	background: url(../images/downpixel_ri.jpg);
+	background-repeat: repeat-x;
+	height: 44px;
+	background-color: #E7F3FF;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: Bold;
+	color: #1B67A8;
+	text-align: center;
+	text-decoration: none;
+}
+
+.rcd-FooterText
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: Bold;
+	color: #00559D;
+}
+/*------ Grid panel css ends here ---- */
+
+/*------ Side Navigation  css ---- */
+.rcd-headlinks
+{
+	display: block;
+	font-family: Arial, Verdana, Tahoma, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #031B53;
+	text-decoration: none;
+	text-align: center;
+}
+
+.rcd-headlinks:hover
+{
+	display: block;
+	font-family: Arial, Verdana, Tahoma, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #000000;
+	text-decoration: underline;
+	text-align: center;
+}
+.rcd-smalllinks
+{
+	display: block;
+	background: #F1F8FF;
+	font-family: Arial, Verdana, Tahoma, Geneva, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #031B53;
+	text-decoration: none;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.rcd-smalllinks:link
+{
+	font-size: 11px;
+	font-weight: normal;
+	color: #3255B1;
+	text-decoration: none;
+}
+.rcd-smalllinks:visited
+{
+	font-size: 11px;
+	font-weight: normal;
+	color: #031B53;
+	text-decoration: none;
+}
+.rcd-smalllinks:hover
+{
+	display: block;
+	background: #D3E5FF;
+	font-size: 11px;
+	font-weight: normal;
+	color: #3255B1;
+	text-decoration: underline;
+}
+
+/*------ sidenav panel css starts here  ---- */
+
+#leftMenu
+{
+	width: 200px;
+	height: 430px;
+	position: absolute;
+	top: 116px;
+	left: 2px; /*left :-500px;*/
+}
+
+#IFrmLeftMenu
+{
+	width: 175px;
+	height: 430px;
+	left: 0px;
+	top: 116px;
+	position: absolute;
+	z-index: 1;
+	display: none; /*left:-500px;*/
+}
+#leftMenuContent
+{
+	border-top: solid 1px #1C68A9;
+	border-bottom: solid 1px #1C68A9;
+	height: 100%;
+	width: 175px;
+	float: left;
+	background-color: #EBF5FF;
+	overflow: auto;
+}
+
+#leftMenuClickStrip
+{
+	border-top: solid 1px #1C68A9;
+	border-bottom: solid 1px #1C68A9;
+	height: 100%;
+	background: url(../images/sidenavpixel_ri.gif);
+	background-repeat: repeat-y;
+	width: 5px;
+	vertical-align: middle;
+	float: left;
+	cursor: hand;
+}
+
+#content
+{
+	height: 590px;
+	width: 100%;
+	margin-left: 20px;
+}
+
+#IFrmContent
+{
+	width: 100%;
+	height: 100%;
+}
+
+/*------ sidenav panel css starts here  ---- */
+
+/*------ Topnav panel css buttons starts here  ---- */
+
+.rcd-butactive
+{
+	/*background-image: url(../images/inactive.gif); 	background-color:#ffffff;*/
+	border: solid 1px #6F9DD9;
+	display: block;
+	height: 14px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-align: center;
+	text-decoration: none;
+	padding: 1px 1px 1px 1px;
+}
+
+.rcd-butactive:hover
+{
+	background-image: url(../images/active_ua.gif);
+	background-position: bottom;
+	border: solid 1px #6F9DD9;
+	display: block;
+	height: 14px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #032575;
+	text-align: center;
+	text-decoration: underline;
+	padding: 1px 1px 1px 1px;
+}
+
+/*------ Topnav panel css buttons ends here  ---- */
+
+/*------ Error page css starts here ---- */
+
+.rcd-errortableborder
+{
+	background-color: #6B9EDE;
+}
+
+.rcd-errorheader
+{
+	background-color: #3E66C1;
+	background: url(../images/head_ua.gif);
+	background-repeat: repeat-x;
+	height: 25px;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+.rcd-errortitle
+{
+	background-color: #ffffff;
+	height: 30px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #FF0000;
+	text-decoration: none;
+	text-align: left;
+}
+
+.rcd-errorbg
+{
+	background-color: #ffffff;
+}
+
+.rcd-errorsubtitle
+{
+	background-color: #CADDF8;
+	height: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+
+.rcd-errortext
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	text-decoration: none;
+}
+
+
+/*------ Error page css ends here ---- */
+/*--START--Copird From hpstyle.css----*/
+.header
+{
+	font-size: 10pt;
+	color: #666699;
+	background-color: #ffffff;
+	font-weight: bold;
+}
+.rcd-label
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 8pt;
+	color: Black;
+	background-color: #ffffff;
+	font-weight: BOLD;
+}
+.labelMessage
+{
+	font-size: 10pt;
+	color: #228b22;
+	background-color: #ffffff;
+	font-weight: BOLD;
+}
+.labelErrorMessage
+{
+	font-size: 10pt;
+	color: Red;
+	background-color: #ffffff;
+	font-weight: BOLD;
+}
+
+.headerMessage
+{
+	font-size: 9pt;
+	color: Maroon;
+	font-weight: BOLD;
+}
+.MandatoryFieldMessage
+{
+	font-size: 8pt;
+	color: Maroon;
+	background-color: #ffffff;
+	font-weight: BOLD;
+}
+.inputText
+{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 12px;
+	color: Black;
+}
+.inputCommissionRateText
+{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 12px;
+	color: Black;
+	width: 51px;
+}
+.selectbox
+{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 12px;
+	color: Black;
+}
+
+/*-END---Copird From hpstyle.css----*/
+.rcd-headerlabel
+{
+	font-size: 10pt;
+	color: #3375b7;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+.rcd-Gridheaderlabel
+{
+	font-size: 11px;
+	color: #FFFFFF;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+.rcd-FlatButton
+{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 11px;
+	color: #002170;
+	background-color: #a8ddff;
+	font-weight: bold;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+.rcd-FlatButtonUpload
+{
+	border-style: solid;
+	border-width: 1px;
+	font-size: 11px;
+	color: #002170;
+	font-weight: bold;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+.rcd-multilinetxtboxvalue
+{
+	border-right: #5D9CC8 1px solid;
+	border-top: #5D9CC8 1px solid;
+	border-bottom: #5D9CC8 1px solid;
+	border-left: #5D9CC8 1px solid;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #FFFFFF;
+}
+.rcd-radiobuttonlabel
+{
+	font-size: 9pt;
+	color: #3375b7;
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+}
+
+.rcd-Welcome
+{
+	font-family: Arial, Tahoma,Verdana, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #002170;
+	text-align: left;
+	text-decoration: none;
+	font-style: normal;
+	vertical-align: middle;
+}
+
+.barIndicatorBorder
+{
+	border: solid 1px #c0c0c0;
+	width: 200px;
+}
+
+.barIndicator_poor
+{
+	background-color: Red;
+}
+
+.barIndicator_weak
+{
+	background-color: Orange;
+}
+
+.barIndicator_good
+{
+	background-color: Lime;
+}
+
+.barIndicator_strong
+{
+	background-color: Blue;
+}
+
+.barIndicator_excellent
+{
+	background-color: Navy;
+}
+
+.validationCallOut_Property
+{
+	left: 50;
+	top: 50;
+	position: absolute;
+	z-index: 1000;
+}
+
+.CustomValidator
+{
+	position: relative;
+	margin-left: 10px;
+	z-index: 1000;
+}
+
+.CustomValidator div
+{
+	border: solid 1px Black;
+	background-color: LemonChiffon;
+	position: relative;
+}
+
+.CustomValidator td
+{
+	border: solid 1px Black;
+	background-color: LemonChiffon;
+}
+
+.CustomValidator .ajax__validatorcallout_popup_table
+{
+	display: none;
+	border: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.modalBackground
+{
+	background-color: Gray;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+.confirm
+{
+	background-color: White;
+	padding: 10px;
+	width: 370px;
+}
+
+.CustomValidator .ajax__validatorcallout_popup_table_row
+{
+	vertical-align: top;
+	height: 100%;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_cell
+{
+	width: 20px;
+	height: 100%;
+	text-align: right;
+	vertical-align: top;
+	border: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_table
+{
+	height: 100%;
+	border: none;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_table_row
+{
+	background-color: transparent;
+	padding: 0px;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_arrow_cell
+{
+	padding: 8px 0px 0px 0px;
+	text-align: right;
+	vertical-align: top;
+	font-size: 1px;
+	border: none;
+	background-color: transparent;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv
+{
+	font-size: 1px;
+	position: relative;
+	left: 1px;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+	width: 15px;
+	background-color: transparent;
+	padding: 0px;
+}
+
+.CustomValidator .ajax__validatorcallout_callout_arrow_cell .ajax__validatorcallout_innerdiv div
+{
+	height: 1px;
+	overflow: hidden;
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+	padding: 0px;
+	margin-left: auto;
+}
+
+.CustomValidator .ajax__validatorcallout_error_message_cell
+{
+	font-family: Verdana;
+	font-size: 10px;
+	padding: 5px;
+	border-right: none;
+	border-left: none;
+	width: 100%;
+}
+
+.CustomValidator .ajax__validatorcallout_icon_cell
+{
+	width: 20px;
+	padding: 5px;
+	border-right: none;
+}
+
+.CustomValidator .ajax__validatorcallout_close_button_cell
+{
+	vertical-align: top;
+	padding: 0px;
+	text-align: right;
+	border-left: none;
+}
+
+.CustomValidator .ajax__validatorcallout_close_button_cell .ajax__validatorcallout_innerdiv
+{
+	border: none;
+	text-align: center;
+	width: 10px;
+	padding: 2px;
+	cursor: pointer;
+}
+
+.ConfirmDIVBG
+{
+	background-color: Gray;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}

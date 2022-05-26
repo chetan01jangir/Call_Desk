@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx">
+      <s:element name="IsUserExist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserExistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserExistResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SMInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SMInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertHaspDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InstID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HaspDetails" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertHaspDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertHaspDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IsUserExistSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUserExist" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="SMInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:SMInfo" />
+  </wsdl:message>
+  <wsdl:message name="SMInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:SMInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertHaspDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertHaspDetails" />
+  </wsdl:message>
+  <wsdl:message name="InsertHaspDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertHaspDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="IsUserExistHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SMInfoHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SMInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertHaspDetailsHttpGetIn">
+    <wsdl:part name="UserID" type="s:string" />
+    <wsdl:part name="InstID" type="s:string" />
+    <wsdl:part name="HaspDetails" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertHaspDetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="UserDetailServiceSoap">
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input message="tns:IsUserExistSoapIn" />
+      <wsdl:output message="tns:IsUserExistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMInfo">
+      <wsdl:input message="tns:SMInfoSoapIn" />
+      <wsdl:output message="tns:SMInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHaspDetails">
+      <wsdl:input message="tns:InsertHaspDetailsSoapIn" />
+      <wsdl:output message="tns:InsertHaspDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="UserDetailServiceHttpGet">
+    <wsdl:operation name="IsUserExist">
+      <wsdl:input message="tns:IsUserExistHttpGetIn" />
+      <wsdl:output message="tns:IsUserExistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SMInfo">
+      <wsdl:input message="tns:SMInfoHttpGetIn" />
+      <wsdl:output message="tns:SMInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertHaspDetails">
+      <wsdl:input message="tns:InsertHaspDetailsHttpGetIn" />
+      <wsdl:output message="tns:InsertHaspDetailsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UserDetailServiceSoap" type="tns:UserDetailServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsUserExist">
+      <soap:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMInfo">
+      <soap:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/SMInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHaspDetails">
+      <soap:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/InsertHaspDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserDetailServiceSoap12" type="tns:UserDetailServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IsUserExist">
+      <soap12:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/IsUserExist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMInfo">
+      <soap12:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/SMInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHaspDetails">
+      <soap12:operation soapAction="http://220.226.199.115/RMPOS_WEB/MPOSWebSvc.asmx/InsertHaspDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UserDetailServiceHttpGet" type="tns:UserDetailServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="IsUserExist">
+      <http:operation location="/IsUserExist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SMInfo">
+      <http:operation location="/SMInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertHaspDetails">
+      <http:operation location="/InsertHaspDetails" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserDetailService">
+    <wsdl:port name="UserDetailServiceSoap" binding="tns:UserDetailServiceSoap">
+      <soap:address location="http://pos.reliancegeneral.co.in/RMPOS_WEB/UserdetailService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserDetailServiceSoap12" binding="tns:UserDetailServiceSoap12">
+      <soap12:address location="http://pos.reliancegeneral.co.in/RMPOS_WEB/UserdetailService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UserDetailServiceHttpGet" binding="tns:UserDetailServiceHttpGet">
+      <http:address location="http://pos.reliancegeneral.co.in/RMPOS_WEB/UserdetailService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

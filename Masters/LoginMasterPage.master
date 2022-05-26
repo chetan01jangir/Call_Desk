@@ -1,0 +1,83 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMasterPage.master.cs"
+    Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="../App_Themes/rcd.css" rel="stylesheet" type="text/css" />
+    <title>Call Desk Management</title>
+    <style type="text/css">
+        a.tooltip
+        {
+            outline: none;
+        }
+        a.tooltip strong
+        {
+            line-height: 30px;
+        }
+        a.tooltip:hover
+        {
+            text-decoration: none;
+        }
+        a.tooltip span
+        {
+            z-index: 10;
+            display: none;
+            padding: 8px 5px;
+            margin-top: -30px;
+            margin-left: 5px;
+            width: 160px;
+            line-height: 16px;
+        }
+        a.tooltip:hover span
+        {
+            display: inline;
+            position: absolute;
+            color: #111;
+            border: 1px solid #DCA;
+            background: #fffAF0;
+        }
+        .callout
+        {
+            z-index: 20;
+            position: absolute;
+            top: 30px;
+            border: 0;
+            left: -12px;
+        }
+        /*CSS3 extras*/
+        a.tooltip span
+        {
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-box-shadow: 5px 5px 8px #CCC;
+            -webkit-box-shadow: 5px 5px 8px #CCC;
+            box-shadow: 5px 5px 8px #CCC;
+        }
+    </style>
+</head>
+<body style="margin-top: 8; margin-bottom: 8; margin-left: 8; margin-right: 8; background-color: #1B67A8;">
+    <%--<script src="../Include/jquery-1.12.4.min.js" language="javascript" type="text/javascript"></script>--%>
+    <script language="javascript" src="../Include/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <%-- <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+            $('#aspnetForm').on('focus', ':input', function () {
+                $(this).attr('autocomplete', 'off');
+            });
+            $('#aspnetForm').on('submit', function () {
+                $('#Password').attr("autocomplete", "off");
+                setTimeout('$("#Password").val("");', 2000);
+            });
+        });        
+</script>--%>
+    <form id="form1" runat="server" autocomplete="off">
+    <center>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </center>
+    </form>
+</body>
+</html>

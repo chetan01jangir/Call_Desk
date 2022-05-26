@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetHolidays">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBranch_Code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFrmDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNoOfDays" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetHolidaysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetHolidaysResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWorkingdays">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBranch_Code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="dtFrmDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="iNoOfDays" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkingdaysResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWorkingdaysResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkingdayCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWorkingdayCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetWorkingdayCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetHolidaysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetHolidays" />
+  </wsdl:message>
+  <wsdl:message name="GetHolidaysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetHolidaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkingdaysSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkingdays" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkingdaysSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkingdaysResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkingdayCountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWorkingdayCount" />
+  </wsdl:message>
+  <wsdl:message name="GetWorkingdayCountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWorkingdayCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetFabHolidaysSoap">
+    <wsdl:operation name="GetHolidays">
+      <wsdl:input message="tns:GetHolidaysSoapIn" />
+      <wsdl:output message="tns:GetHolidaysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdays">
+      <wsdl:input message="tns:GetWorkingdaysSoapIn" />
+      <wsdl:output message="tns:GetWorkingdaysSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdayCount">
+      <wsdl:input message="tns:GetWorkingdayCountSoapIn" />
+      <wsdl:output message="tns:GetWorkingdayCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetFabHolidaysSoap" type="tns:GetFabHolidaysSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHolidays">
+      <soap:operation soapAction="http://tempuri.org/GetHolidays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdays">
+      <soap:operation soapAction="http://tempuri.org/GetWorkingdays" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdayCount">
+      <soap:operation soapAction="http://tempuri.org/GetWorkingdayCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetFabHolidaysSoap12" type="tns:GetFabHolidaysSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetHolidays">
+      <soap12:operation soapAction="http://tempuri.org/GetHolidays" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdays">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkingdays" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkingdayCount">
+      <soap12:operation soapAction="http://tempuri.org/GetWorkingdayCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetFabHolidays">
+    <wsdl:port name="GetFabHolidaysSoap" binding="tns:GetFabHolidaysSoap">
+      <soap:address location="http://fab.reliancegeneral.co.in:8080/GetFabHolidays.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetFabHolidaysSoap12" binding="tns:GetFabHolidaysSoap12">
+      <soap12:address location="http://fab.reliancegeneral.co.in:8080/GetFabHolidays.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

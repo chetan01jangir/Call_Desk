@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+	<siteMapNode title="Call Desk System" url="Default.aspx">
+
+		<siteMapNode title="Administration" url="~/Admin/Default.aspx">
+
+			<siteMapNode url="~/Admin/AddConfigSettings.aspx" title="Add / Manage Setting Config"  description="Add Setting Config" />
+			<siteMapNode url="~/Admin/AddOfficeType.aspx" title="Add / Manage Office Type"  description="Add and Manage Office Type" />
+			<!--<siteMapNode url="~/Admin/ManageSettingConfig.aspx" title="Manage Setting Config"  description="Manage Setting Config" />-->
+			<siteMapNode url="~/Admin/AddRoles.aspx" title="Add / Manage Role"  description="Add and Manage Role" />
+			<!--<siteMapNode url="~/Admin/AddChannel.aspx" title="Add / Manage Channel"  description="Add and Manage Channel" />-->
+			<!--<siteMapNode url="~/Admin/AddDesignation.aspx" title="Add / Manage Designation"  description="Add and Manage Designation" />-->
+			<siteMapNode url="~/Admin/CreateUser.aspx" title="Create / Manage User"  description="Create and Manage User" />
+			<siteMapNode url="~/Admin/BlockUsers.aspx" title="Block / UnBlock User"  description="Block / UnBlock User" />
+			<siteMapNode url="~/Admin/UserBranchMapping.aspx" title="User Branch Mapping"  description="User Branch Mapping" />
+			<siteMapNode url="~/Admin/AssignRoletoUser.aspx" title="Assigned Role to User"  description="Assigned Role to User" />
+			<siteMapNode url="~/Admin/AddGroups.aspx" title="Add / Manage Groups"  description="Add / Manage Groups" />
+     
+			<!--
+			<siteMapNode url="~/Admin/BranchMaster.aspx" title="Add / Manage Branch"  description="Add and Manage Branch" />
+			<siteMapNode url="~/Admin/RegionMaster.aspx" title="Add / Manage Region"  description="Add and Manage Region" />
+			<siteMapNode url="~/Admin/ZoneMaster.aspx" title="Add / Manage Zone"  description="Add and Manage Zone" />
+			-->
+			<!--<siteMapNode url="~/Admin/AddStatus.aspx" title="Add / Manage Status"  description="Add and Manage Status" />
+			
+			
+			<siteMapNode url="~/Admin/AddApproverAuthority.aspx" title="Add / Manage Approver Authority"  description="Create and Manage Approver Authority" />-->
+			<siteMapNode url="~/Admin/AddNewApplication.aspx" title="Add / Manage Application"  description="Create and Manage Application" />
+			<siteMapNode url="~/Admin/AddNewIssueRequestType.aspx" title="Add / Manage Issue Request Type"  description="Create and Manage Issue Request Type" />
+			<siteMapNode url="~/Admin/AddNewIssueRequestSubType.aspx" title="Add / Manage Issue Request SubType"  description="Create and Manage Issue Request SubType" />
+			<siteMapNode url="~/Admin/ApplicationIssueRequestMapping.aspx" title="Application Issue / Request Mapping"  description="Application Issue / Request Mapping" />
+			<!--<siteMapNode url="~/Admin/AddAIRMComment.aspx" title="Add Comment Application Issue / Request"  description="Add Comment Application Issue Reques" />-->
+			<siteMapNode url="~/Admin/AddAIRSubtypeMapping.aspx" title="Application Issue / Request Sub Type Mapping"  description="Application Issue / Request Sub Type Mapping" />
+			<siteMapNode url="~/Admin/AddAIRSTMComment.aspx" title="Application Issue / Request Sub Type Comment"  description="Application Issue Request Sub Type Comment" />
+			<siteMapNode url="~/Admin/AIRSTApproverMapping.aspx" title="Approver Mapping"  description="Approver Mapping" />
+			<siteMapNode url="~/Admin/ManageApproverMapping.aspx" title="Manage Approver Mapping"  description="Manage Approver Mapping" />
+			<siteMapNode url="~/Admin/GetApproverMappingByUser.aspx" title="Manage Approver Mapping By User"  description="Manage Approver Mapping By User" />
+			<!--<siteMapNode url="~/Admin/CopyofGetApproverMappingByUser.aspx" title="Manage Approver Mapping By User"  description="Manage Approver Mapping By User" />-->
+			<siteMapNode url="~/Admin/AddTemplateDocuments.aspx" title="File Template Mapping"  description="File Template Mapping" />
+
+      <!--<siteMapNode url="~/Downloadfile.aspx" title="Download Files"  description="Download Files" />-->
+			
+		</siteMapNode>
+		
+		
+		<siteMapNode title="Request / Track" url="~/User/Default.aspx">			
+		<siteMapNode url="~/User/RegisterCall.aspx" title="Register Call" description="Log a new call here" />
+		<siteMapNode url="~/User/TrackCall.aspx" title="Track Your Call"  description="Track the Call" />
+		<siteMapNode url="~/User/ChangePassword.aspx" title="Change Password"  description="Change Password" />	
+		<!--<siteMapNode url="~/User/EscalationDetails.aspx" title="Escalation Matrix" description="Escalation Matrix" />
+		<siteMapNode url="~/User/ContactUs.aspx" title="Contact Us"	description="Contact Us"/>	
+		<siteMapNode url="~/User/UserManual.aspx" title="Downloads"	description="Downloads"/>-->
+		<siteMapNode url="~/User/UserConfirmation.aspx" title="UserConfirmation"	description="UserConfirmation"/>
+      <siteMapNode url="~/Downloadfile.aspx" title="Download Files"  description="Download Files" />
+		</siteMapNode>
+
+    <siteMapNode title="Contact" url="~/Contact/Default.aspx">
+      <siteMapNode url="~/User/ContactUs.aspx" title="Service desk contacts - IT" description="Service desk contacts - IT"></siteMapNode>      
+      <siteMapNode url="~/User/EscalationDetails.aspx" title="Escalation Matrix – For IT" description="Escalation Matrix – For> IT"></siteMapNode>
+      <siteMapNode url="~/User/EscalationDetailsITInfra.aspx" title="Escalation Matrix – For IT Infra" description="Escalation Matrix – For IT Infra"></siteMapNode>
+    </siteMapNode>
+
+		    
+		<siteMapNode title="Reports" url="~/Reports/Default.aspx">
+			<siteMapNode url="~/Reports/CallDeskReports.aspx" title="Call Desk Report" description="Generates Reports for Call Desk" />
+			<siteMapNode url="~/Reports/IMDReports.aspx" title="IMD Report" description="Generates Reports for IMDs"/>
+			<siteMapNode url="~/Reports/IMDFeedbackReport.aspx" title="Feedback Report" description="Generates Reports for Feedback"/>
+		</siteMapNode>
+
+    <siteMapNode title="Training Module" url="~/Other/Default.aspx">
+      <siteMapNode url="~/User/UserManual.aspx" title="Download Training Doc." description="Download Training Doc."></siteMapNode>
+      <!--<siteMapNode url="~/SwapBranch/SwapBranch.aspx" title="Swap Branch" description="Swap Branch"></siteMapNode>--> 
+    </siteMapNode>
+
+    <siteMapNode title="Swap Branch" url="~/SwapBranch/Default.aspx">
+			<siteMapNode url="~/SwapBranch/SwapBranch.aspx" title="Swap Branch"  description="Swap Branch" />
+		</siteMapNode>
+    
+	</siteMapNode>
+</siteMap>

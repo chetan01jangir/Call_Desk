@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <!--<DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://imd.reliancegeneral.co.in/UserDetails.asmx?wsdl" filename="UserDetails.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://imd.reliancegeneral.co.in/UserDetails.asmx?disco" filename="UserDetails.disco" />-->
+
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://10.65.5.185/MPlusServices/CallHelpDesk.svc?wsdl" filename="CallHelpDesk.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.65.5.185/MPlusServices/CallHelpDesk.svc?xsd=xsd1" filename="CallHelpDesk.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://10.65.5.185/MPlusServices/CallHelpDesk.svc?xsd=xsd0" filename="CallHelpDesk0.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,41 @@
+<asp:GridView Width="100%" PageSize="10" EmptyDataText="No Record Found" CssClass="rcd-Grid" SkinId="gridviewSkin" runat="server"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+    <FooterStyle BackColor="#F7F6F3"  Font-Bold="True" ForeColor="White" />
+                        <RowStyle CssClass="rcd-Grid"  />
+                        <EditRowStyle BackColor="#999999" />                        
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <PagerStyle CssClass="rcd-Gridpagination"  HorizontalAlign="Center" />
+                        <HeaderStyle CssClass="rcd-GridHead"  />
+                        <AlternatingRowStyle  CssClass="rcd-GridAlt"  />
+</asp:GridView>
+
+<asp:DetailsView Width="100%" PageSize="10" EmptyDataText="No Record Found"  SkinId="DetailViewSkin" runat="server"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+    <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                        <EditRowStyle BackColor="#999999" />
+                        <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                        <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+</asp:DetailsView>
+
+
+<asp:GridView Width="100%" PageSize="5" EmptyDataText="No Record Found" CssClass="rcd-Grid" SkinId="gridviewCustomer" runat="server"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3">
+    <FooterStyle BackColor="#F7F6F3"  Font-Bold="True" ForeColor="White" />
+                        <RowStyle CssClass="rcd-Grid"  />
+                        <EditRowStyle BackColor="#999999" />                        
+                        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                        <PagerStyle CssClass="rcd-Gridpagination"  HorizontalAlign="Center" />
+                        <HeaderStyle CssClass="rcd-GridHead"  />
+                        <AlternatingRowStyle  CssClass="rcd-GridAlt"  />
+</asp:GridView>
+
+<asp:TextBox SkinId="textboxSkin" runat="server" CssClass="rcd-txtboxvalue"></asp:TextBox>
+<asp:TextBox SkinId="multilinetextboxSkin" runat="server" CssClass="rcd-multilinetxtboxvalue"></asp:TextBox>
+<asp:DropDownList SkinId="dropdownSkin" font-size="8pt" font-names="verdana" runat="server"  BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" />
+<asp:LoginName SkinId="LoginNameSkin" runat="server" CssClass="rcd-UserName"></asp:LoginName>
+<asp:Label SkinId="SkinLabel" runat="server" CssClass="rcd-Welcome"/>
+<asp:LoginStatus  SkinId="LoginStatusSkin" runat="server" CssClass="rcd-UserName"></asp:LoginStatus>
+<asp:FileUpload SkinId="FileUploaderSkin" runat="server" CssClass="rcd-FlatButtonUpload" />
+<asp:Button SkinId="buttonSkin" runat="server" CssClass="rcd-FlatButton"></asp:Button>
+<asp:LinkButton SkinId="lnkSkin" runat="server" font-size="8pt" font-names="verdana" />
+<asp:LinkButton SkinId="LoginStatusSkin" runat="server" CssClass="rcd-UserName" />
+<asp:Label SkinId="SkinDivLabel" runat="server" CssClass="rcd-DivLable"/>

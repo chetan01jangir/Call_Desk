@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://rgicl.techdeskutil.savvion.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://rgicl.techdeskutil.savvion.com" targetNamespace="http://rgicl.techdeskutil.savvion.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="getUserMailIDResponse">
+    <wsdl:part name="getUserMailIDReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getGrpMembersRequest">
+    <wsdl:part name="teamName" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getGrpMembersResponse">
+    <wsdl:part name="getGrpMembersReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getUserMailIDRequest">
+    <wsdl:part name="userName" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:portType name="TechDeskUtil">
+    <wsdl:operation name="getGrpMembers" parameterOrder="teamName">
+      <wsdl:input name="getGrpMembersRequest" message="impl:getGrpMembersRequest" />
+      <wsdl:output name="getGrpMembersResponse" message="impl:getGrpMembersResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserMailID" parameterOrder="userName">
+      <wsdl:input name="getUserMailIDRequest" message="impl:getUserMailIDRequest" />
+      <wsdl:output name="getUserMailIDResponse" message="impl:getUserMailIDResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TechDeskUtilSoapBinding" type="impl:TechDeskUtil">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getGrpMembers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getGrpMembersRequest">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdeskutil.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getGrpMembersResponse">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdeskutil.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserMailID">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUserMailIDRequest">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdeskutil.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getUserMailIDResponse">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdeskutil.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TechDeskUtilService">
+    <wsdl:port name="TechDeskUtil" binding="impl:TechDeskUtilSoapBinding">
+      <wsdlsoap:address location="https://bpm.reliancegeneral.co.in/sbm/services/TechDeskUtil" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

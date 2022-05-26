@@ -1,0 +1,247 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%--<%@ Register Assembly="Microsoft.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+    Namespace="Microsoft.Web.UI" TagPrefix="asp" %>--%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href="../App_Themes/rcd.css" rel="stylesheet" type="text/css" />
+    <title>:: Call Desk Management System ::</title>
+
+    <script type="text/javascript">
+    var IsSearchDisplayed = 1;
+    var IsLeftDisplayed = 1;
+    function ToggleLeft()
+    {
+        if(IsLeftDisplayed == 1)
+        {
+            IsLeftDisplayed=0;
+            HideElement('leftMenuBox');
+            //document.images["MenuButton"].src= "Images/sidenav_right_ri.GIF";
+        }
+        else
+        {
+            IsLeftDisplayed=1;
+            ShowElement('leftMenuBox');
+            //document.images["MenuButton"].src= "Images/sidenav_left_ri.GIF";
+        }
+    }
+    function ToggleSearch()
+    {
+        if(IsSearchDisplayed == 1)
+        {
+            IsSearchDisplayed=0;
+            HideElement('SearchMenuBox');
+        }
+        else
+        {
+            IsSearchDisplayed=1;
+            ShowElement('SearchMenuBox');
+        }
+    }
+    function HideElement(ElementId)
+    {
+        document.getElementById(ElementId).style.display = "none";
+    }
+    function ShowElement(ElementId)
+    {
+        document.getElementById(ElementId).style.display = "block";
+    }
+    
+    </script>
+
+    <style type="text/css">
+<!--
+.style1 {color: #CC0000}
+-->
+ </style>
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <%--<td class="rcd-TopLeftBanner">
+                                &nbsp;</td>
+                            <td class="rcd-TopRightBanner">
+                                &nbsp;</td>--%>
+                            <%--<asp:Image runat="server" ID="imgMain" ImageUrl="~/Images/CallDeskMain.jpg" Width="100%"
+                                ImageAlign="Middle" />--%>
+                                <td style="background-color:#d6f0ff; width:100%;height:80px; border: 1px solid #1191d7;">
+                                <div>
+                                <div style="float:left; width:300px">
+                                <img src="../Images/rgiLogo.png" alt="Reliance General Insurance" title="Reliance General Insurance" />
+                                </div>
+                                <div style="float:right">
+                                <img src="../Images/CalldeskLogo.png" />
+                                </div>
+                                </div>
+                                </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="rcd-TopNav">
+                    <table width="98%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="left">
+                                <table>
+                                    <tr>
+                                        <td align="left">
+                                            <asp:Label ID="lblUerWelcome" Text="Welcome :" runat="server" SkinID="SkinLabel"></asp:Label></td>
+                                        <td align="left">
+                                            <asp:LoginName ID="lnLoggedInName" runat="server" SkinID="LoginNameSkin" />
+                                            -
+                                            <asp:Label runat="server" ID="lblUserName" SkinID="SkinLabel"></asp:Label>
+                                        </td>
+                                         <td>                                         
+                                        </td>
+                                         <td>                                         
+                                        </td>
+                                         <td align="left">
+                                            <asp:Label ID="lblLoggedBranchName" Text="Logged Branch :" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>
+                                        <td align="left">
+                                            <asp:Label ID="lblBranchName" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>                                        
+                                    </tr>
+                                </table>
+                            </td>
+                           
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td align="left">
+                                            <asp:Label ID="lblLastLogin" Text="Last Login :" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>
+                                        <td align="left">
+                                            <asp:Label ID="lblLoginVal" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>
+                                         <td>                                         
+                                        </td>
+                                        <td align="left">
+                                            <asp:Label ID="lblLastLogOut" Text="Last LogOut :" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>
+                                        <td align="left">
+                                            <asp:Label ID="lblLogOutVal" runat="server" SkinID="SkinLabel"></asp:Label>
+                                        </td>                                        
+                                    </tr>
+                                </table>                              
+                            </td>                            
+                            <td style="text-align: right;">
+                              <%--  <asp:LoginStatus ID="lsLoginStatus" runat="server" LogoutAction="RedirectToLoginPage"
+                                    Font-Underline="False" SkinID="LoginStatusSkin" />--%>                                    
+                                    <asp:LinkButton ID ="lsLoginStatus"  runat="server" Font-Underline="False" SkinID="LoginStatusSkin"  Visible="true" OnClick="lsLoginStatus_LoggingOut">Logout</asp:LinkButton>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="rcd-TopNavShadow">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <div>
+                        <table width="100%" height="430" border="0" cellpadding="0" cellspacing="0" class="rcd-InnerBodyBg">
+                            <tr>
+                                <td width="200" valign="top" id="leftMenuBox" class="ricd-SideNavBodybg">
+                                    <table width="200" border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td style="height: 2px" colspan="5">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td width="100%" class="rcd-TopHeaderBlue">
+                                                            MENU</td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td valign="top" align="left" style="height: 300px">
+                                                <div class="rcd-Div">
+                                                    <asp:TreeView ID="tvCallDeskTree" runat="server" ImageSet="Msdn"  CollapseImageToolTip=""
+                                                        DataSourceID="smCallDesk" ExpandDepth="1" ShowLines="true" PopulateNodesFromClient="False"
+                                                        AutoGenerateDataBindings="False" >
+                                                        <ParentNodeStyle Font-Bold="False" />
+                                                        <HoverNodeStyle Font-Underline="False" ForeColor="#C00000" Font-Bold="False" Font-Italic="False" />
+                                                        <SelectedNodeStyle Font-Names="Arial" Font-Size="8pt" Font-Bold="False" Font-Underline="False"
+                                                            ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                                                        <NodeStyle Font-Names="Arial" Font-Size="8pt" ForeColor="black" HorizontalPadding="5px"
+                                                            NodeSpacing="0px" VerticalPadding="0px" />
+                                                    </asp:TreeView>
+													 <asp:TreeView NodeStyle-HorizontalPadding="24px" ID="trv" runat="server" ForeColor="Black" Font-Names="Arial" Font-Size="8pt" Font-Bold="False" Font-Underline="False" OnSelectedNodeChanged="trv_SelectedNodeChanged">
+                                                            <Nodes><asp:TreeNode Text="Feedback"></asp:TreeNode></Nodes>
+                                                    </asp:TreeView>
+                                                    <asp:SiteMapDataSource ID="smCallDesk" runat="server" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="height: 370px; width: 11px" id="leftMenuClickStrip" onclick="ToggleLeft()">
+                                    <div>
+                                        <img alt="Scroll Up" src="../Images/BScrollUp.gif" width="8px" style="cursor: Hand" />
+                                    </div>
+                                    <img src="../images/sidenav_right_ri.gif" width="8px" height="72px" id="ImgArrowOut"
+                                        alt="Menu" style="display: block;" />
+                                    <div>
+                                        <img alt="Scroll Down" src="../Images/BScrollDown.gif" width="8px" style="cursor: Hand" />
+                                    </div>
+                                </td>
+                                <td width="100%" valign="top">
+                                    <table width="100%" height="440" border="0" cellpadding="1" cellspacing="1">
+                                        <tr>
+                                            <td valign="top">
+                                                <table width="100%" height="440" border="0" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td valign="top">
+                                                            <!--- Innerbody div / iframe table starts here --->
+                                                            <div class="rcd-Div" align="center">
+                                                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                                </asp:ContentPlaceHolder>
+                                                            </div>
+                                                        </td>
+                                                        <!--- Innerbody table ends here --->
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="center">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="rcd-Footer">
+                                    <tr>
+                                        <td>
+                                            Insurance is a subject matter of solicitation.IRDA Reg. No. 103 dated 23/10/2000.Registered
+                                            Office: Maker Chambers IV, 3rd Floor, 222, Nariman Point, Mumbai - 400 021. Phone:
+                                            022-3032 5000. Copyright &copy; 2010 <span class="rcd-FooterText">Reliance <span
+                                                class="style1">General Insurance</span> Co. Ltd.</span> All rights reserved.
+                                            Ver 2.0</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

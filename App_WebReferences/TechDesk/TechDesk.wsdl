@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="http://rgicl.techdesk.savvion.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://rgicl.techdesk.savvion.com" targetNamespace="http://rgicl.techdesk.savvion.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types />
+  <wsdl:message name="STARTCALLDESKRequest">
+    <wsdl:part name="UserRemark" type="soapenc:string" />
+    <wsdl:part name="ApproverEmailID" type="soapenc:string" />
+    <wsdl:part name="ApproverDesignation" type="soapenc:string" />
+    <wsdl:part name="ApproverName" type="soapenc:string" />
+    <wsdl:part name="UserEmailID" type="soapenc:string" />
+    <wsdl:part name="UserContactNo" type="soapenc:string" />
+    <wsdl:part name="ApplicationType" type="soapenc:string" />
+    <wsdl:part name="ApproverID" type="soapenc:string" />
+    <wsdl:part name="ReopenId" type="soapenc:string" />
+    <wsdl:part name="Branch" type="soapenc:string" />
+    <wsdl:part name="CallLogDate" type="soapenc:string" />
+    <wsdl:part name="UploadScreen" type="soapenc:string" />
+    <wsdl:part name="CallCreatedBy" type="soapenc:string" />
+    <wsdl:part name="CallType" type="soapenc:string" />
+    <wsdl:part name="IssueRequestId" type="soapenc:string" />
+    <wsdl:part name="TicketNo" type="soapenc:string" />
+    <wsdl:part name="ChannelSM" type="soapenc:string" />
+    <wsdl:part name="TeamName" type="soapenc:string" />
+    <wsdl:part name="IssueReqSubTypeID" type="soapenc:string" />
+    <wsdl:part name="TeamTAT" type="soapenc:string" />
+    <wsdl:part name="ApproverUserID2" type="soapenc:string" />
+    <wsdl:part name="AppSupportPerformer" type="soapenc:string" />
+    <wsdl:part name="Approver2Dsgn" type="soapenc:string" />
+    <wsdl:part name="Approver2Email" type="soapenc:string" />
+    <wsdl:part name="Approver2Name" type="soapenc:string" />
+    <wsdl:part name="TicketValue" type="soapenc:string" />
+    <wsdl:part name="username" type="soapenc:string" />
+    <wsdl:part name="password" type="soapenc:string" />
+    <wsdl:part name="piName" type="soapenc:string" />
+    <wsdl:part name="priority" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getPerformerResponse">
+    <wsdl:part name="getPerformerReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="getPerformerRequest">
+    <wsdl:part name="ticketNumber" type="soapenc:string" />
+    <wsdl:part name="performerType" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="STARTCALLDESKResponse">
+    <wsdl:part name="STARTCALLDESKReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:portType name="TechDesk">
+    <wsdl:operation name="STARTCALLDESK" parameterOrder="UserRemark ApproverEmailID ApproverDesignation ApproverName UserEmailID UserContactNo ApplicationType ApproverID ReopenId Branch CallLogDate UploadScreen CallCreatedBy CallType IssueRequestId TicketNo ChannelSM TeamName IssueReqSubTypeID TeamTAT ApproverUserID2 AppSupportPerformer Approver2Dsgn Approver2Email Approver2Name TicketValue username password piName priority">
+      <wsdl:input name="STARTCALLDESKRequest" message="impl:STARTCALLDESKRequest" />
+      <wsdl:output name="STARTCALLDESKResponse" message="impl:STARTCALLDESKResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPerformer" parameterOrder="ticketNumber performerType">
+      <wsdl:input name="getPerformerRequest" message="impl:getPerformerRequest" />
+      <wsdl:output name="getPerformerResponse" message="impl:getPerformerResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TechDeskSoapBinding" type="impl:TechDesk">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="STARTCALLDESK">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="STARTCALLDESKRequest">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdesk.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="STARTCALLDESKResponse">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdesk.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPerformer">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPerformerRequest">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdesk.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getPerformerResponse">
+        <wsdlsoap:body use="encoded" namespace="http://rgicl.techdesk.savvion.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TechDeskService">
+    <wsdl:port name="TechDesk" binding="impl:TechDeskSoapBinding">
+      <wsdlsoap:address location="http://10.65.5.80/sbm/services/TechDesk" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
